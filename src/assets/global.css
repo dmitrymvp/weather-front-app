@@ -1,0 +1,16 @@
+@import 'normalize.css';
+@import 'variables.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+#root {
+  min-height: 100vh;
+  background-color: var(--color-bg-page);
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+}

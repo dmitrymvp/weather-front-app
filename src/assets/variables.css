@@ -1,0 +1,63 @@
+:root {
+  /* === Фон === */
+  --color-bg-page: #f1efe8; /* gray/100 */
+  --color-bg-card: #ffffff; /* white */
+  --color-bg-card-param: #f1efe8; /* gray/100 */
+  --color-bg-weather-card: #b5d4f4; /* blue/100 */
+  --color-bg-temp-chip: #e6f1fb; /* blue/50 */
+  --color-bg-wind-card: #e1f5ee; /* green/50 */
+  --color-bg-tab-active: #5f5e5a; /* gray/700 */
+
+  /* === Текст === */
+  --color-text-primary: #2c2c2a; /* gray/900 */
+  --color-text-secondary: #5f5e5a; /* gray/700 */
+  --color-text-meta: #888780; /* gray/500 */
+  --color-text-page-title: #888780; /* gray/500 */
+  --color-text-tab-active: #ffffff; /* white */
+  --color-text-sun-time: #633806; /* amber/800 */
+
+  /* === Рамки === */
+  --color-border-weather-card: #378add; /* blue/400 */
+  --color-border-card: #888780; /* gray/500 */
+  --color-border-wind-card: #085041; /* green/700 */
+
+  /* === Разделитель === */
+  --color-divider: #888780; /* gray/500 */
+
+  /* === Солнце и световой день === */
+  --color-sun: #ef9f27; /* amber/300 */
+  --color-daylight-bar: #ef9f27; /* amber/300 */
+  --color-daylight-dot-inner: #fac775; /* amber/100 */
+  --color-daylight-dot-border: #ef9f27; /* amber/300 */
+  --color-daylight-bar-bg: #f1efe8; /* gray/100 */
+
+  /* === Облака и осадки === */
+  --color-cloud-light: #b5d4f4; /* blue/100 */
+  --color-cloud-heavy: #888780; /* gray/500 */
+  --color-rain: #042c53; /* blue/900 */
+  --color-rain-heavy: #378add; /* blue/400 */
+  --color-snow: #378add; /* blue/400 */
+
+  /* === Ночные иконки === */
+  --color-night: #042c53; /* blue/900 */
+
+  /* === Гроза === */
+  --color-lightning: #ef9f27; /* amber/300 */
+
+  /* === Ветер === */
+  --color-wind-icon: #d3d1c7; /* gray/200 */
+  --color-wind-arrow: #2c2c2a; /* gray/900 */
+  --color-wind-compass-border: #085041; /* green/700 */
+
+  /* === Почасовой график === */
+  --color-chart-line: #378add; /* blue/400 */
+  --color-chart-dot: #b5d4f4; /* blue/100 */
+  --color-chart-progress-fill: #5f5e5a; /* gray/700 */
+  --color-chart-progress-bg: #f1efe8; /* gray/100 */
+}
+
+/* === Шрифты === */
+:root {
+  --font-primary: 'Manrope', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+}

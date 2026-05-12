@@ -1,5 +1,11 @@
-function App() {
-  return <h1>Hello </h1>
+import './App.css'
+
+const App = () => {
+  return (
+    <div>
+      <h1>Weather App</h1>
+    </div>
+  )
 }
 
 export default App
