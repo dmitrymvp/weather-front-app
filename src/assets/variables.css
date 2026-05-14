@@ -11,14 +11,16 @@
   /* === Текст === */
   --color-text-primary: #2c2c2a; /* gray/900 */
   --color-text-secondary: #5f5e5a; /* gray/700 */
-  --color-text-meta: #888780; /* gray/500 */
   --color-text-page-title: #888780; /* gray/500 */
+
+  --color-text-meta: #888780; /* gray/500 */
   --color-text-tab-active: #ffffff; /* white */
   --color-text-sun-time: #633806; /* amber/800 */
 
   /* === Рамки === */
-  --color-border-weather-card: #378add; /* blue/400 */
   --color-border-card: #888780; /* gray/500 */
+
+  --color-border-weather-card: #378add; /* blue/400 */
   --color-border-wind-card: #085041; /* green/700 */
 
   /* === Разделитель === */

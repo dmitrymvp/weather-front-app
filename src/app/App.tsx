@@ -1,11 +1,27 @@
-import './App.css'
+import { useGeolocation } from '../features/getLocation';
+import ErrorScreen from '../widgets/ErrorScreen';
+import WeatherPage from '../pages/WeatherPage';
+import Loader from '../shared/ui/Loader/Loader';
+import Footer from '../widgets/Footer';
+import Header from '../widgets/Header';
+import './App.css';
 
 const App = () => {
-  return (
-    <div>
-      <h1>Weather App</h1>
-    </div>
-  )
-}
+  const { coordinates, loading, error } = useGeolocation();
 
-export default App
+  const renderContent = () => {
+    if (loading) return <Loader />;
+    if (error) return <ErrorScreen message={error} />;
+    return <WeatherPage coordinates={coordinates} />;
+  };
+
+  return (
+    <div className="container">
+      <Header />
+      {renderContent()}
+      <Footer />
+    </div>
+  );
+};
+
+export default App;
