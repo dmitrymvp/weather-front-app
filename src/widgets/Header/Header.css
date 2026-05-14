@@ -1,0 +1,15 @@
+.header {
+  border-bottom: 3px solid var(--color-text-page-title);
+  width: 100%;
+  height: 68px;
+  display: flex;
+  align-items: center;
+}
+
+.page-name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-text-page-title);
+}
