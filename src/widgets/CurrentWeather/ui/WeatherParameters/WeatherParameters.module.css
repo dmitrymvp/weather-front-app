@@ -1,0 +1,25 @@
+.parametersCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-card);
+  border-radius: 16px;
+  padding: 20px;
+  width: 344px;
+  height: 236px;
+}
+
+.parametersCard__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.parametersCard__containerCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
