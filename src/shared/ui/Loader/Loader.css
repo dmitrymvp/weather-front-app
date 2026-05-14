@@ -1,0 +1,32 @@
+.loader {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.loader__image-wrapper {
+  width: 128px;
+  height: 128px;
+}
+
+.loader__spiner {
+  animation: spin 2s linear infinite;
+}
+
+.loader__description {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(90deg);
+  }
+}
