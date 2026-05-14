@@ -1,0 +1,25 @@
+.tempCard {
+  border-radius: 16px;
+  padding: 12px;
+  width: 180px;
+  height: 80px;
+  background: var(--color-bg-temp-chip);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tempCard__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.tempCard__temp {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16667;
+  text-align: center;
+}
