@@ -1,4 +1,3 @@
-import icon from '../../assets/icons/cloudy.svg';
 import './ErrorScreen.css';
 
 type ErrorScreenProps = {
@@ -9,7 +8,7 @@ const ErrorScreen = ({ message }: ErrorScreenProps) => {
   return (
     <div className="error-screen">
       <div className="error-screen__image-wrapper">
-        <img src={icon} alt="Облако" />
+        <img src="/icons/cloudy.svg" alt="Облако" />
       </div>
       {message === 'denied' ? (
         <>
