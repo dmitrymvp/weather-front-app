@@ -25,17 +25,19 @@ const CurrentWeather = ({ data }: CurrentWeatherProps) => {
         tempDifference={`${round1(data.tempMax - data.tempMin)}°`}
         icon={getWeatherIcon(data.icon)}
       />
-      <WeatherParameters
-        humidity={`${data.humidity}%`}
-        pressure={`${data.pressure} мм`}
-        clouds={`${data.clouds}%`}
-        precipitation={`${round1(data.precipitation)} мм`}
-      />
-      <WindCard
-        deg={data.windDeg}
-        windSpeed={round1(data.windSpeed)}
-        windGust={data.windGust != null ? `Порывы до ${round1(data.windGust)} м/с` : 'Нет данных'}
-      />
+      <div className="current-weather__right">
+        <WeatherParameters
+          humidity={`${data.humidity}%`}
+          pressure={`${data.pressure} мм`}
+          clouds={`${data.clouds}%`}
+          precipitation={`${round1(data.precipitation)} мм`}
+        />
+        <WindCard
+          deg={data.windDeg}
+          windSpeed={round1(data.windSpeed)}
+          windGust={data.windGust != null ? `Порывы до ${round1(data.windGust)} м/с` : 'Нет данных'}
+        />
+      </div>
     </section>
   );
 };

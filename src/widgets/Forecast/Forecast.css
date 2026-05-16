@@ -18,7 +18,29 @@
 .forecast__list {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 25px;
+  align-items: stretch;
+  gap: 16px;
   width: 100%;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.forecast__list::-webkit-scrollbar {
+  height: 4px;
+}
+
+.forecast__list::-webkit-scrollbar-track {
+  background: var(--color-bg-page);
+  border-radius: 2px;
+}
+
+.forecast__list::-webkit-scrollbar-thumb {
+  background: var(--color-border-card);
+  border-radius: 2px;
+}
+
+@media (max-width: 599px) {
+  .forecast__list {
+    gap: 10px;
+  }
 }

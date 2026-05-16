@@ -1,12 +1,23 @@
 .temp-card {
   border-radius: 16px;
   padding: 12px;
-  width: 180px;
-  height: 80px;
+  flex: 1;
+  min-width: 0;
   background: var(--color-bg-temp-chip);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 6px;
+}
+
+@media (max-width: 599px) {
+  .temp-card__title {
+    font-size: 13px;
+  }
+
+  .temp-card__value {
+    font-size: 20px;
+  }
 }
 
 .temp-card__title {

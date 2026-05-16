@@ -10,6 +10,7 @@ import Forecast from '@widgets/Forecast';
 import HourlyForecast from '@widgets/HourlyForecast';
 import { fetchForecast, fetchHourlyForecast } from '@entities/weather';
 import type { ForecastDay, HourlyPoint } from '@entities/weather';
+import './WeatherPage.css';
 
 interface Props {
   coordinates: Coordinates;
@@ -63,7 +64,7 @@ const WeatherPage = ({ coordinates }: Props) => {
   if (!state.weather) return null;
 
   return (
-    <main>
+    <main className="weather-page">
       <CurrentWeather data={state.weather} />
       <Daylight data={state.weather} />
       <Forecast days={state.forecast} />
