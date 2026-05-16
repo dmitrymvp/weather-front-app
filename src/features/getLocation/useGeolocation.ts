@@ -8,11 +8,11 @@ interface GeolocationState {
 }
 
 export const useGeolocation = () => {
-  const [state, setState] = useState<GeolocationState>({
+  const [state, setState] = useState<GeolocationState>(() => ({
     coordinates: null,
-    loading: true,
-    error: null,
-  });
+    loading: 'geolocation' in navigator,
+    error: 'geolocation' in navigator ? null : 'unavailable',
+  }));
 
   useEffect(() => {
     if (!('geolocation' in navigator)) return;

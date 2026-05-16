@@ -11,8 +11,9 @@ const App = () => {
 
   const renderContent = () => {
     if (loading) return <Loader />;
-    if (error) return <ErrorScreen message={error} />;
-    return <WeatherPage coordinates={coordinates} />;
+    if (error || !coordinates) return <ErrorScreen message={error ?? 'unavailable'} />;
+
+    return <WeatherPage key={`${coordinates.lat}-${coordinates.lon}`} coordinates={coordinates} />;
   };
 
   return (
