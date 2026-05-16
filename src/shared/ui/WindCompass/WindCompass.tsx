@@ -1,5 +1,3 @@
-// src/shared/ui/WindCompass/WindCompass.tsx
-
 import './WindCompass.css';
 
 interface WindCompassProps {

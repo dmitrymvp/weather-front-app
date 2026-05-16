@@ -11,9 +11,6 @@
   height: 403px;
 }
 
-.weather-card__header {
-}
-
 .weather-card__city {
   font-weight: 700;
   font-size: 24px;
@@ -45,7 +42,6 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  /* align-self: center; */
 }
 
 .weather-card__feels-like-label {

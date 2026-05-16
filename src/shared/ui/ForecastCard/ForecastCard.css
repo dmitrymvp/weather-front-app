@@ -17,7 +17,6 @@
   background: var(--color-bg-weather-card);
 }
 
-/* День недели */
 .forecast-card__day-label {
   width: 100%;
   font-weight: 400;
