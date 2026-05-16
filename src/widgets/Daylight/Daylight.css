@@ -18,7 +18,7 @@
   color: var(--color-text-secondary);
 }
 
-.daylight__trackBlock {
+.daylight__track-block {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -34,13 +34,13 @@
   color: var(--color-text-secondary);
 }
 
-.track {
+.daylight__track {
   position: relative;
   width: 100%;
   height: 8px;
 }
 
-.track::before {
+.daylight__track::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -48,7 +48,7 @@
   border-radius: 10px;
 }
 
-.track__fill {
+.daylight__track-fill {
   position: absolute;
   top: 0;
   left: 0;
@@ -57,7 +57,7 @@
   border-radius: 10px;
 }
 
-.track__thumb {
+.daylight__track-thumb {
   position: absolute;
   top: 50%;
   width: 20px;
@@ -68,31 +68,31 @@
   transform: translate(-50%, -50%);
 }
 
-.daylght__info {
+.daylight__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.daylght__info > *:not(:first-child) {
+.daylight__info > *:not(:first-child) {
   align-items: center;
 }
 
-.info__Item {
+.daylight__info-item {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.info__Label {
+.daylight__info-label {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #888780;
 }
 
-.info__Value {
+.daylight__info-value {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;

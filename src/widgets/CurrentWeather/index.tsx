@@ -4,7 +4,7 @@ import { getWeatherIcon } from '../../shared/utils/weatherIcons';
 import MainWeatherCard from './ui/MainWeaterCard/MainWeatherCard';
 import WeatherParameters from './ui/WeatherParameters/WeatherParameters';
 import type { WeatherData } from '../../entities/weather';
-import s from './CurrentWeather.module.css';
+import './CurrentWeather.css';
 import WindCard from './ui/WindCard/WindCard';
 
 type CurrentWeatherProps = {
@@ -13,7 +13,7 @@ type CurrentWeatherProps = {
 
 const CurrentWeather = ({ data }: CurrentWeatherProps) => {
   return (
-    <section className={s.currentWeatherSection}>
+    <section className="current-weather">
       <MainWeatherCard
         city={data.city}
         date={formatTimestamp(data.dt)}

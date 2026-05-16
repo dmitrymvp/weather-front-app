@@ -1,4 +1,4 @@
-import s from './TempCard.module.css';
+import './TempCard.css';
 
 type TempCardProps = {
   title: string | undefined;
@@ -7,9 +7,9 @@ type TempCardProps = {
 
 const TempCard = ({ title, temp }: TempCardProps) => {
   return (
-    <div className={s.tempCard}>
-      <p className={s.tempCard__title}>{title}</p>
-      <p className={s.tempCard__temp}>{temp}</p>
+    <div className="temp-card">
+      <p className="temp-card__title">{title}</p>
+      <p className="temp-card__value">{temp}</p>
     </div>
   );
 };

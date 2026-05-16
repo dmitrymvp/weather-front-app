@@ -1,7 +1,7 @@
 import type { ForecastDay } from '../../entities/weather/api/types';
 import ForecastCard from '../../shared/ui/ForecastCard/ForecastCard';
 import { getWeatherIcon } from '../../shared/utils/weatherIcons';
-import s from './Forecast.module.css';
+import './Forecast.css';
 
 type ForecastProps = {
   days: ForecastDay[];
@@ -9,9 +9,9 @@ type ForecastProps = {
 
 const Forecast = ({ days }: ForecastProps) => {
   return (
-    <section className={s.forecast}>
-      <h3 className={s.forecast__title}>Прогноз на 5 дней</h3>
-      <div className={s.forecast__list}>
+    <section className="forecast">
+      <h3 className="forecast__title">Прогноз на 5 дней</h3>
+      <div className="forecast__list">
         {days.map((day, index) => {
           const isToday = index === 0;
           const dayLabel = isToday

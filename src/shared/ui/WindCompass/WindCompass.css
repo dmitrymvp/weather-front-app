@@ -1,4 +1,4 @@
-.compass {
+.wind-compass {
   border: 1px solid var(--color-border-wind-card);
   background: var(--color-bg-card);
   border-radius: 100%;
@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.north {
+.wind-compass__north {
   position: absolute;
   top: 4px;
   left: 50%;
@@ -18,7 +18,8 @@
   text-align: center;
   color: var(--color-text-secondary);
 }
-.south {
+
+.wind-compass__south {
   position: absolute;
   bottom: 4px;
   left: 50%;
@@ -29,7 +30,8 @@
   text-align: center;
   color: var(--color-text-secondary);
 }
-.west {
+
+.wind-compass__west {
   position: absolute;
   left: 4px;
   top: 50%;
@@ -40,7 +42,8 @@
   text-align: center;
   color: var(--color-text-secondary);
 }
-.east {
+
+.wind-compass__east {
   position: absolute;
   right: 4px;
   top: 50%;
@@ -52,7 +55,7 @@
   color: var(--color-text-secondary);
 }
 
-.arrow {
+.wind-compass__arrow {
   position: absolute;
   top: 50%;
   left: 50%;

@@ -1,4 +1,4 @@
-.parametersCard {
+.weather-params {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   height: 236px;
 }
 
-.parametersCard__title {
+.weather-params__title {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -18,7 +18,7 @@
   color: var(--color-text-secondary);
 }
 
-.parametersCard__containerCards {
+.weather-params__grid {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;

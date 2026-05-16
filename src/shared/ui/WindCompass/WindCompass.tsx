@@ -1,20 +1,20 @@
 // src/shared/ui/WindCompass/WindCompass.tsx
 
-import s from './WindCompass.module.css';
+import './WindCompass.css';
 
 interface WindCompassProps {
   deg: number;
 }
 
 const WindCompass = ({ deg }: WindCompassProps) => (
-  <div className={s.compass}>
-    <div className={s.arrow} style={{ '--deg': `${deg}deg` } as React.CSSProperties}>
+  <div className="wind-compass">
+    <div className="wind-compass__arrow" style={{ '--deg': `${deg}deg` } as React.CSSProperties}>
       <img src="/icons/arrow-compass.svg" alt="" />
     </div>
-    <span className={s.north}>С</span>
-    <span className={s.south}>Ю</span>
-    <span className={s.west}>З</span>
-    <span className={s.east}>В</span>
+    <span className="wind-compass__north">С</span>
+    <span className="wind-compass__south">Ю</span>
+    <span className="wind-compass__west">З</span>
+    <span className="wind-compass__east">В</span>
   </div>
 );
 

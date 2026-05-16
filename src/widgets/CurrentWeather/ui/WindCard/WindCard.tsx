@@ -1,6 +1,6 @@
 import WindCompass from '../../../../shared/ui/WindCompass/WindCompass';
 import { degreesToCompass } from '../../../../shared/utils/converters';
-import s from './WindCard.module.css';
+import './WindCard.css';
 
 type WindCardProps = {
   deg: number;
@@ -10,17 +10,17 @@ type WindCardProps = {
 
 const WindCard = ({ deg, windSpeed, windGust }: WindCardProps) => {
   return (
-    <div className={s.windCard}>
-      <p className={s.windCard__title}>Ветер</p>
-      <div className={s.windCard__container}>
+    <div className="wind-card">
+      <p className="wind-card__title">Ветер</p>
+      <div className="wind-card__container">
         <WindCompass deg={deg} />
-        <div className={s.windCard__windInfo}>
-          <div>
-            <p className={s.windCard__windSpeed}>{windSpeed}</p>
-            <span className={s.windCard__windSpeedDescr}>{`м/с ${degreesToCompass(deg)}`}</span>
+        <div className="wind-card__info">
+          <div className="wind-card__speed-row">
+            <p className="wind-card__speed">{windSpeed}</p>
+            <span className="wind-card__speed-label">{`м/с ${degreesToCompass(deg)}`}</span>
           </div>
 
-          <p className={s.windCard__windGust}>{windGust}</p>
+          <p className="wind-card__gust">{windGust}</p>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import s from './ParametrCard.module.css';
+import './ParametrCard.css';
 
 type ParametrCardProps = {
   title: string | undefined;
@@ -7,9 +7,9 @@ type ParametrCardProps = {
 
 const ParametrCard = ({ title, value }: ParametrCardProps) => {
   return (
-    <div className={s.parametrCard}>
-      <p className={s.parametrCard__title}>{title}</p>
-      <p className={s.parametrCard__temp}>{value}</p>
+    <div className="param-card">
+      <p className="param-card__title">{title}</p>
+      <p className="param-card__value">{value}</p>
     </div>
   );
 };

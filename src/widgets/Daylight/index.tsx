@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { WeatherData } from '../../entities/weather';
 import { formatSunTime, sunlightDuration, sunPosition } from '../../shared/utils/converters';
-import s from './Daylight.module.css';
+import './Daylight.css';
 
 interface Props {
   data: Pick<WeatherData, 'sunrise' | 'sunset' | 'timezone'>;
@@ -17,11 +17,11 @@ const Daylight = ({ data: { sunrise, sunset, timezone } }: Props) => {
   const sunsetLabel = formatSunTime(sunset, timezone);
 
   return (
-    <section className={s.daylight}>
-      <h3 className={s.daylight__title}>Световой день</h3>
+    <section className="daylight">
+      <h3 className="daylight__title">Световой день</h3>
 
-      <div className={s.daylight__trackBlock}>
-        <div className={s.daylight__labels}>
+      <div className="daylight__track-block">
+        <div className="daylight__labels">
           <span>{sunriseLabel}</span>
           <span>утро</span>
           <span>полдень</span>
@@ -29,25 +29,25 @@ const Daylight = ({ data: { sunrise, sunset, timezone } }: Props) => {
           <span>{sunsetLabel}</span>
         </div>
 
-        <div className={s.track}>
-          <div className={s.track__fill} style={{ width: positionPercent }} />
-          <div className={s.track__thumb} style={{ left: positionPercent }} />
+        <div className="daylight__track">
+          <div className="daylight__track-fill" style={{ width: positionPercent }} />
+          <div className="daylight__track-thumb" style={{ left: positionPercent }} />
         </div>
 
-        <div className={s.daylght__info}>
-          <div className={s.info__Item}>
-            <span className={s.info__Label}>Восход</span>
-            <span className={s.info__Value}>{sunriseLabel}</span>
+        <div className="daylight__info">
+          <div className="daylight__info-item">
+            <span className="daylight__info-label">Восход</span>
+            <span className="daylight__info-value">{sunriseLabel}</span>
           </div>
 
-          <div className={s.info__Item} data-center>
-            <span className={s.info__Label}>Световой день</span>
-            <span className={s.info__Value}>{sunlightDuration(sunrise, sunset)}</span>
+          <div className="daylight__info-item" data-center>
+            <span className="daylight__info-label">Световой день</span>
+            <span className="daylight__info-value">{sunlightDuration(sunrise, sunset)}</span>
           </div>
 
-          <div className={s.info__Item} data-right>
-            <span className={s.info__Label}>Закат</span>
-            <span className={s.info__Value}>{sunsetLabel}</span>
+          <div className="daylight__info-item" data-right>
+            <span className="daylight__info-label">Закат</span>
+            <span className="daylight__info-value">{sunsetLabel}</span>
           </div>
         </div>
       </div>

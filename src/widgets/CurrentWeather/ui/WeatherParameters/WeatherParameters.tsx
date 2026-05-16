@@ -1,5 +1,5 @@
 import ParametrCard from '../../../../shared/ui/ParametrCard/ParametrCard';
-import s from './WeatherParameters.module.css';
+import './WeatherParameters.css';
 
 type WeatherParametersProps = {
   humidity: string;
@@ -15,9 +15,9 @@ const WeatherParameters = ({
   precipitation,
 }: WeatherParametersProps) => {
   return (
-    <div className={s.parametersCard}>
-      <p className={s.parametersCard__title}>Параметры</p>
-      <div className={s.parametersCard__containerCards}>
+    <div className="weather-params">
+      <p className="weather-params__title">Параметры</p>
+      <div className="weather-params__grid">
         <ParametrCard title="Влажность" value={humidity} />
         <ParametrCard title="Давление" value={pressure} />
         <ParametrCard title="Облачность" value={clouds} />

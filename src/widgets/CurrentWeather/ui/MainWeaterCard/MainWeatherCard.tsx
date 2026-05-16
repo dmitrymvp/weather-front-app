@@ -1,5 +1,5 @@
 import TempCard from '../../../../shared/ui/TempCard/TempCard';
-import s from './MainWeatherCard.module.css';
+import './MainWeatherCard.css';
 
 type MainWeatherCardProps = {
   city: string;
@@ -25,23 +25,23 @@ const MainWeatherCard = ({
   icon,
 }: MainWeatherCardProps) => {
   return (
-    <div className={s.weatherCard}>
-      <div className={s.weatherCard__header}>
-        <h2 className={s.weatherCard__city}>{city}</h2>
-        <p className={s.weatherCard__date}>{date}</p>
+    <div className="weather-card">
+      <div className="weather-card__header">
+        <h2 className="weather-card__city">{city}</h2>
+        <p className="weather-card__date">{date}</p>
       </div>
-      <div className={s.weatherCard__tempContainer}>
-        <p className={s.weatherCard__temp}>{temp}</p>
-        <div className={s.weatherCard__feelsLike}>
-          <p className={s.weatherCard__feelsLikeDescr}>Ощущается</p>
-          <p className={s.weatherCard__feelsLikeTemp}>{feelsLike}</p>
+      <div className="weather-card__temp-container">
+        <p className="weather-card__temp">{temp}</p>
+        <div className="weather-card__feels-like">
+          <p className="weather-card__feels-like-label">Ощущается</p>
+          <p className="weather-card__feels-like-temp">{feelsLike}</p>
         </div>
-        <div className={s.weatherCard__imageContainer}>
+        <div className="weather-card__icon-wrap">
           <img src={icon} alt={weatherDescription} />
         </div>
       </div>
-      <p className={s.weatherCard__descr}>{weatherDescription}</p>
-      <div className={s.weatherCard__tempCardContainer}>
+      <p className="weather-card__description">{weatherDescription}</p>
+      <div className="weather-card__temp-cards">
         <TempCard title="Мин" temp={tempMin} />
         <TempCard title="Макс" temp={tempMax} />
         <TempCard title="Разница" temp={tempDifference} />

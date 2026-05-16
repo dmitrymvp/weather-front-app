@@ -1,4 +1,4 @@
-.windCard {
+.wind-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   height: 151px;
 }
 
-.windCard__title {
+.wind-card__title {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -18,18 +18,18 @@
   color: var(--color-text-secondary);
 }
 
-.windCard__container {
+.wind-card__container {
   display: flex;
   gap: 25px;
 }
 
-.windCard__windInfo {
+.wind-card__info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.windCard__windSpeed {
+.wind-card__speed {
   display: inline;
   margin-right: 5px;
   font-weight: 700;
@@ -37,7 +37,13 @@
   line-height: 1.16667;
 }
 
-.windCard__windGust {
+.wind-card__speed-row {
+}
+
+.wind-card__speed-label {
+}
+
+.wind-card__gust {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14286;
