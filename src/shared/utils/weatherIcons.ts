@@ -19,7 +19,6 @@ const iconMap: Record<string, string> = {
   '50n': 'fog',
 };
 
-// Fallback если вдруг OWM вернул неизвестный код
 const FALLBACK = 'unknown';
 
 export function getWeatherIcon(owmCode: string | undefined): string {

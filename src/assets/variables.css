@@ -24,6 +24,7 @@
 
   /* === Разделитель === */
   --color-divider: #888780; /* gray/500 */
+  --color-divider-forecast-card: #378add; /* blue/400 */
 
   /* === Солнце и световой день === */
   --color-sun: #ef9f27; /* amber/300 */
@@ -31,24 +32,6 @@
   --color-daylight-dot-inner: #fac775; /* amber/100 */
   --color-daylight-dot-border: #ef9f27; /* amber/300 */
   --color-daylight-bar-bg: #f1efe8; /* gray/100 */
-
-  /* === Облака и осадки === */
-  --color-cloud-light: #b5d4f4; /* blue/100 */
-  --color-cloud-heavy: #888780; /* gray/500 */
-  --color-rain: #042c53; /* blue/900 */
-  --color-rain-heavy: #378add; /* blue/400 */
-  --color-snow: #378add; /* blue/400 */
-
-  /* === Ночные иконки === */
-  --color-night: #042c53; /* blue/900 */
-
-  /* === Гроза === */
-  --color-lightning: #ef9f27; /* amber/300 */
-
-  /* === Ветер === */
-  --color-wind-icon: #d3d1c7; /* gray/200 */
-  --color-wind-arrow: #2c2c2a; /* gray/900 */
-  --color-wind-compass-border: #085041; /* green/700 */
 
   /* === Почасовой график === */
   --color-chart-line: #378add; /* blue/400 */
