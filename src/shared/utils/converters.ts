@@ -10,7 +10,7 @@ export const formatTimestamp = (timestamp: number | undefined): string => {
 };
 
 export function round1(n: number): number {
-  return Math.round(n * 10) / 10;
+  return Math.round(n);
 }
 
 export const degreesToCompass = (deg: number): string => {
