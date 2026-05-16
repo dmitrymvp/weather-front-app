@@ -1,4 +1,4 @@
-import TempCard from '../../../../shared/ui/TempCard/TempCard';
+import TempCard from '@shared/ui/TempCard/TempCard';
 import './MainWeatherCard.css';
 
 type MainWeatherCardProps = {

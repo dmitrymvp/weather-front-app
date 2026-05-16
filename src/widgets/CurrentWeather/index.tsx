@@ -1,9 +1,9 @@
-import { capitalize } from '../../shared/utils/capitalize';
-import { formatTimestamp, round1 } from '../../shared/utils/converters';
-import { getWeatherIcon } from '../../shared/utils/weatherIcons';
+import { capitalize } from '@shared/utils/capitalize';
+import { formatTimestamp, round1 } from '@shared/utils/converters';
+import { getWeatherIcon } from '@shared/utils/weatherIcons';
 import MainWeatherCard from './ui/MainWeaterCard/MainWeatherCard';
 import WeatherParameters from './ui/WeatherParameters/WeatherParameters';
-import type { WeatherData } from '../../entities/weather';
+import type { WeatherData } from '@entities/weather';
 import './CurrentWeather.css';
 import WindCard from './ui/WindCard/WindCard';
 

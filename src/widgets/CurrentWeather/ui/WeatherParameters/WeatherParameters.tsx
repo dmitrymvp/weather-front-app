@@ -1,4 +1,4 @@
-import ParametrCard from '../../../../shared/ui/ParametrCard/ParametrCard';
+import ParametrCard from '@shared/ui/ParametrCard/ParametrCard';
 import './WeatherParameters.css';
 
 type WeatherParametersProps = {

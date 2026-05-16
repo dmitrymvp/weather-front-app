@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import type { Coordinates } from '../../shared/types/coordinates';
+import type { Coordinates } from '@shared/types/coordinates';
 
 interface GeolocationState {
   coordinates: Coordinates | null;

@@ -1,5 +1,5 @@
-import WindCompass from '../../../../shared/ui/WindCompass/WindCompass';
-import { degreesToCompass } from '../../../../shared/utils/converters';
+import WindCompass from '@shared/ui/WindCompass/WindCompass';
+import { degreesToCompass } from '@shared/utils/converters';
 import './WindCard.css';
 
 type WindCardProps = {

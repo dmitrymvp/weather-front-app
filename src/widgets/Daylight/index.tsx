@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import type { WeatherData } from '../../entities/weather';
-import { formatSunTime, sunlightDuration, sunPosition } from '../../shared/utils/converters';
+import type { WeatherData } from '@entities/weather';
+import { formatSunTime, sunlightDuration, sunPosition } from '@shared/utils/converters';
 import './Daylight.css';
 
 interface Props {

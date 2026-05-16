@@ -1,9 +1,9 @@
-import { useGeolocation } from '../features/getLocation';
-import ErrorScreen from '../widgets/ErrorScreen';
-import WeatherPage from '../pages/WeatherPage';
-import Loader from '../shared/ui/Loader/Loader';
-import Footer from '../widgets/Footer';
-import Header from '../widgets/Header';
+import { useGeolocation } from '@features/getLocation';
+import ErrorScreen from '@widgets/ErrorScreen';
+import WeatherPage from '@pages/WeatherPage';
+import Loader from '@shared/ui/Loader/Loader';
+import Footer from '@widgets/Footer';
+import Header from '@widgets/Header';
 import './App.css';
 
 const App = () => {

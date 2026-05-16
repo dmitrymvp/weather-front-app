@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
-import { fetchCurrentWeather } from '../../entities/weather';
-import type { WeatherData } from '../../entities/weather';
-import Loader from '../../shared/ui/Loader/Loader';
-import ErrorScreen from '../../widgets/ErrorScreen';
-import CurrentWeather from '../../widgets/CurrentWeather';
-import type { Coordinates } from '../../shared/types/coordinates';
-import Daylight from '../../widgets/Daylight';
-import Forecast from '../../widgets/Forecast';
-import HourlyForecast from '../../widgets/HourlyForecast';
-import type { ForecastDay, HourlyPoint } from '../../entities/weather/api/types';
-import { fetchForecast } from '../../entities/weather/api/fetchForecast';
-import { fetchHourlyForecast } from '../../entities/weather/api/fetchHourlyForecast';
+import { fetchCurrentWeather } from '@entities/weather';
+import type { WeatherData } from '@entities/weather';
+import Loader from '@shared/ui/Loader/Loader';
+import ErrorScreen from '@widgets/ErrorScreen';
+import CurrentWeather from '@widgets/CurrentWeather';
+import type { Coordinates } from '@shared/types/coordinates';
+import Daylight from '@widgets/Daylight';
+import Forecast from '@widgets/Forecast';
+import HourlyForecast from '@widgets/HourlyForecast';
+import { fetchForecast, fetchHourlyForecast } from '@entities/weather';
+import type { ForecastDay, HourlyPoint } from '@entities/weather';
 
 interface Props {
   coordinates: Coordinates;

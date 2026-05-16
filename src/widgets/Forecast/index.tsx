@@ -1,6 +1,6 @@
-import type { ForecastDay } from '../../entities/weather/api/types';
-import ForecastCard from '../../shared/ui/ForecastCard/ForecastCard';
-import { getWeatherIcon } from '../../shared/utils/weatherIcons';
+import type { ForecastDay } from '@entities/weather';
+import ForecastCard from '@shared/ui/ForecastCard/ForecastCard';
+import { getWeatherIcon } from '@shared/utils/weatherIcons';
 import './Forecast.css';
 
 type ForecastProps = {

@@ -1,5 +1,5 @@
-import type { ForecastDay } from '../../../entities/weather/api/types';
-import { round1 } from '../../utils/converters';
+import type { ForecastDay } from '@entities/weather';
+import { round1 } from '@shared/utils/converters';
 import './ForecastCard.css';
 
 type ForecastCardProps = {

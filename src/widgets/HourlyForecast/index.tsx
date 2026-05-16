@@ -10,9 +10,9 @@ import {
   type ChartOptions,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import type { HourlyPoint } from '../../entities/weather/api/types';
-import { getWeatherIcon } from '../../shared/utils/weatherIcons';
-import { round1 } from '../../shared/utils/converters';
+import type { HourlyPoint } from '@entities/weather';
+import { getWeatherIcon } from '@shared/utils/weatherIcons';
+import { round1 } from '@shared/utils/converters';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Filler, Tooltip);
 
