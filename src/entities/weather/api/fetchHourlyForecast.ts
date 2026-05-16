@@ -1,5 +1,5 @@
-import { httpClient } from '../../../shared/api/httpClient';
-import type { Coordinates } from '../../../shared/types/coordinates';
+import { httpClient } from '@shared/api/httpClient';
+import type { Coordinates } from '@shared/types/coordinates';
 import type { HourlyPoint, OWMForecastResponse } from './types';
 
 export async function fetchHourlyForecast(coords: Coordinates): Promise<HourlyPoint[]> {

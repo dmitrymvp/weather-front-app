@@ -1,2 +1,4 @@
 export { fetchCurrentWeather } from './api/fetchCurrentWeather';
-export type { WeatherData } from './api/types';
+export { fetchForecast } from './api/fetchForecast';
+export { fetchHourlyForecast } from './api/fetchHourlyForecast';
+export type { WeatherData, ForecastDay, HourlyPoint } from './api/types';

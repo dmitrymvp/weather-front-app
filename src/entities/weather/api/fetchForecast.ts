@@ -1,5 +1,5 @@
-import { httpClient } from '../../../shared/api/httpClient';
-import type { Coordinates } from '../../../shared/types/coordinates';
+import { httpClient } from '@shared/api/httpClient';
+import type { Coordinates } from '@shared/types/coordinates';
 import type { ForecastDay, OWMForecastItem, OWMForecastResponse } from './types';
 
 export async function fetchForecast(coords: Coordinates): Promise<ForecastDay[]> {

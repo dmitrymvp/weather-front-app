@@ -1,6 +1,6 @@
-import { httpClient } from '../../../shared/api/httpClient';
+import { httpClient } from '@shared/api/httpClient';
 import { hpaToMmHg } from '../model/formatsPressure';
-import type { Coordinates } from '../../../shared/types/coordinates';
+import type { Coordinates } from '@shared/types/coordinates';
 import type { OWMCurrentResponse, WeatherData } from './types';
 
 export async function fetchCurrentWeather(coordinates: Coordinates): Promise<WeatherData> {
