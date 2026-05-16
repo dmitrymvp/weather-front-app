@@ -12,9 +12,7 @@ export async function fetchForecast(coords: Coordinates): Promise<ForecastDay[]>
 
   raw.list.forEach((item) => {
     const date = new Date(item.dt * 1000).toLocaleDateString('ru-RU');
-    if (!byDay.has(date)) {
-      byDay.set(date, []);
-    }
+    if (!byDay.has(date)) byDay.set(date, []);
     byDay.get(date)!.push(item);
   });
 

@@ -7,8 +7,10 @@ import CurrentWeather from '../../widgets/CurrentWeather';
 import type { Coordinates } from '../../shared/types/coordinates';
 import Daylight from '../../widgets/Daylight';
 import Forecast from '../../widgets/Forecast';
-import type { ForecastDay } from '../../entities/weather/api/types';
+import HourlyForecast from '../../widgets/HourlyForecast';
+import type { ForecastDay, HourlyPoint } from '../../entities/weather/api/types';
 import { fetchForecast } from '../../entities/weather/api/fetchForecast';
+import { fetchHourlyForecast } from '../../entities/weather/api/fetchHourlyForecast';
 
 interface Props {
   coordinates: Coordinates;
@@ -17,6 +19,7 @@ interface Props {
 interface PageState {
   weather: WeatherData | null;
   forecast: ForecastDay[];
+  hourly: HourlyPoint[];
   loading: boolean;
   error: boolean;
 }
@@ -24,6 +27,7 @@ interface PageState {
 const initialState: PageState = {
   weather: null,
   forecast: [],
+  hourly: [],
   loading: true,
   error: false,
 };
@@ -34,20 +38,24 @@ const WeatherPage = ({ coordinates }: Props) => {
   const { lat, lon } = coordinates;
 
   useEffect(() => {
-    Promise.all([fetchCurrentWeather({ lat, lon }), fetchForecast({ lat, lon })])
-      .then(([weatherData, forecastData]) => {
-        const todayForecast = forecastData[0];
+    Promise.all([
+      fetchCurrentWeather({ lat, lon }),
+      fetchForecast({ lat, lon }),
+      fetchHourlyForecast({ lat, lon }),
+    ])
+      .then(([weatherData, daily, hourly]) => {
+        const todayForecast = daily[0];
         const weather: WeatherData = {
           ...weatherData,
           tempMin: todayForecast?.tempMin ?? weatherData.tempMin,
           tempMax: todayForecast?.tempMax ?? weatherData.tempMax,
         };
 
-        setState({ weather, forecast: forecastData, loading: false, error: false });
+        setState({ weather, forecast: daily, hourly, loading: false, error: false });
       })
       .catch((err) => {
         console.error('fetch failed:', err);
-        setState({ weather: null, forecast: [], loading: false, error: true });
+        setState({ weather: null, forecast: [], hourly: [], loading: false, error: true });
       });
   }, [lat, lon]);
 
@@ -55,12 +63,12 @@ const WeatherPage = ({ coordinates }: Props) => {
   if (state.error) return <ErrorScreen message="unavailable" />;
   if (!state.weather) return null;
 
-  console.log(state);
   return (
     <main>
       <CurrentWeather data={state.weather} />
       <Daylight data={state.weather} />
       <Forecast days={state.forecast} />
+      <HourlyForecast points={state.hourly} />
     </main>
   );
 };

@@ -88,3 +88,10 @@ export interface ForecastDay {
   icon: string;
   pop: number;
 }
+
+export interface HourlyPoint {
+  dt: number;
+  temp: number;
+  icon: string;
+  timezone: number;
+}
