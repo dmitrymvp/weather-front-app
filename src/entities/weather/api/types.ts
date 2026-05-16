@@ -43,7 +43,7 @@ export interface WeatherData {
   pressure: number;
   windSpeed: number;
   windDeg: number;
-  windGust: number;
+  windGust: number | null;
   clouds: number;
   precipitation: number;
   description: string;
@@ -52,39 +52,39 @@ export interface WeatherData {
   sunset: number;
 }
 
-// export interface OWMForecastItem {
-//   dt: number;
-//   main: {
-//     temp: number;
-//     temp_min: number;
-//     temp_max: number;
-//     humidity: number;
-//   };
-//   weather: Array<{
-//     description: string;
-//     icon: string;
-//   }>;
-//   wind: {
-//     speed: number;
-//     deg: number;
-//   };
-//   pop: number;
-// }
+export interface OWMForecastItem {
+  dt: number;
+  main: {
+    temp: number;
+    temp_min: number;
+    temp_max: number;
+    humidity: number;
+  };
+  weather: Array<{
+    description: string;
+    icon: string;
+  }>;
+  wind: {
+    speed: number;
+    deg: number;
+  };
+  pop: number;
+}
 
-// export interface OWMForecastResponse {
-//   list: OWMForecastItem[];
-//   city: {
-//     timezone: number;
-//   };
-// }
+export interface OWMForecastResponse {
+  list: OWMForecastItem[];
+  city: {
+    timezone: number;
+  };
+}
 
-// export interface ForecastDay {
-//   dt: number;
-//   tempMin: number;
-//   tempMax: number;
-//   humidity: number;
-//   windSpeed: number;
-//   description: string;
-//   icon: string;
-//   pop: number;
-// }
+export interface ForecastDay {
+  dt: number;
+  tempMin: number;
+  tempMax: number;
+  humidity: number;
+  windSpeed: number;
+  description: string;
+  icon: string;
+  pop: number;
+}
