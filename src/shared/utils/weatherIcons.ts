@@ -24,5 +24,5 @@ const FALLBACK = 'unknown';
 export function getWeatherIcon(owmCode: string | undefined): string {
   if (!owmCode) return FALLBACK;
   const name = iconMap[owmCode] ?? FALLBACK;
-  return `/icons/${name}.svg`;
+  return `icons/${name}.svg`;
 }
