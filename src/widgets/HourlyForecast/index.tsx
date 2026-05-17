@@ -71,8 +71,8 @@ const HourlyForecast = ({ points }: Props) => {
 
   return (
     <section className="hourly-forecast">
-      <h2 className="hourly-forecast__title">На ближайшие 24 часа</h2>
       <div className="hourly-forecast__scroll">
+        <h2 className="hourly-forecast__title">Прогноз на ближайшие 24 часа</h2>
         <div className="hourly-forecast__inner">
           <div className="hourly-forecast__icons-row">
             {points.map((point) => (

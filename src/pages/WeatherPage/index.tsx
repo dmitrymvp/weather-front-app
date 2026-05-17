@@ -10,9 +10,11 @@ import Forecast from '@widgets/Forecast';
 import HourlyForecast from '@widgets/HourlyForecast';
 import { fetchForecast, fetchHourlyForecast } from '@entities/weather';
 import type { ForecastDay, HourlyPoint } from '@entities/weather';
+import './WeatherPage.css';
 
 interface Props {
   coordinates: Coordinates;
+  cityLabel?: string;
 }
 
 interface PageState {
@@ -31,7 +33,7 @@ const initialState: PageState = {
   error: false,
 };
 
-const WeatherPage = ({ coordinates }: Props) => {
+const WeatherPage = ({ coordinates, cityLabel }: Props) => {
   const [state, setState] = useState<PageState>(initialState);
 
   const { lat, lon } = coordinates;
@@ -63,8 +65,8 @@ const WeatherPage = ({ coordinates }: Props) => {
   if (!state.weather) return null;
 
   return (
-    <main>
-      <CurrentWeather data={state.weather} />
+    <main className="weather-page">
+      <CurrentWeather data={cityLabel ? { ...state.weather, city: cityLabel } : state.weather} />
       <Daylight data={state.weather} />
       <Forecast days={state.forecast} />
       <HourlyForecast points={state.hourly} />

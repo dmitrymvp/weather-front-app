@@ -1,75 +1,70 @@
-# React + TypeScript + Vite
+# Погодный фронт
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для просмотра погоды с поддержкой геолокации и предустановленных городов.
 
-Currently, two official plugins are available:
+## Стек
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 + TypeScript
+- Vite 8
+- Chart.js / react-chartjs-2
+- OpenWeatherMap API
+- Архитектура Feature-Sliced Design (FSD)
 
-## React Compiler
+## Быстрый старт
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### 1. Установить зависимости
 
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Настроить переменные окружения
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Создать файл `.env` в корне проекта:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```env
+VITE_OWM_API_KEY=your_api_key_here
+VITE_OWM_BASE_URL=https://api.openweathermap.org/data/2.5
 ```
+
+### 3. Запустить dev-сервер
+
+```bash
+npm run dev
+```
+
+Приложение откроется на `http://localhost:5173`.
+
+## Скрипты
+
+| Команда           | Описание                         |
+| ----------------- | -------------------------------- |
+| `npm run dev`     | Запуск в режиме разработки с HMR |
+| `npm run build`   | Сборка для продакшена            |
+| `npm run preview` | Предпросмотр продакшен-сборки    |
+| `npm run lint`    | Проверка линтером                |
+
+## Структура проекта
+
+```
+src/
+├── app/          # Корень приложения, App.tsx
+├── pages/        # Страницы (WeatherPage)
+├── widgets/      # Составные блоки UI (Header, CurrentWeather, Forecast и др.)
+├── features/     # Фичи (locationTabs, getLocation)
+├── entities/     # Бизнес-сущности (weather API, типы)
+├── shared/       # Переиспользуемые утилиты и компоненты
+└── assets/       # Глобальные стили и CSS-переменные
+```
+
+## Города
+
+Приложение поддерживает 5 локаций:
+
+- **Мой адрес** — определяется через Geolocation API браузера
+- Барселона
+- Дубай
+- Ванкувер
+- Рио-де-Жанейро
+
+Выбранная вкладка сохраняется в `localStorage`.

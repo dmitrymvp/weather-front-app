@@ -1,5 +1,35 @@
 .current-weather {
   display: flex;
-  flex-wrap: wrap;
   gap: 16px;
+  flex-wrap: wrap;
+}
+
+.current-weather__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 0 0 344px;
+}
+
+@media (max-width: 945px) {
+  .current-weather {
+    flex-direction: column;
+  }
+
+  .current-weather__right {
+    flex: none;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .current-weather__right > * {
+    flex: 1;
+  }
+}
+
+@media (max-width: 599px) {
+  .current-weather__right {
+    flex-direction: column;
+  }
 }

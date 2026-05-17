@@ -8,7 +8,7 @@ export async function fetchHourlyForecast(coords: Coordinates): Promise<HourlyPo
     lon: String(coords.lon),
   });
 
-  return raw.list.slice(0, 8).map((item) => ({
+  return raw.list.slice(0, 9).map((item) => ({
     dt: item.dt,
     temp: item.main.temp,
     icon: item.weather[0].icon,

@@ -5,8 +5,18 @@
   justify-content: space-between;
   border-radius: 12px;
   padding: 12px;
-  width: 144px;
-  height: 72px;
+  flex: 1 1 calc(50% - 7px);
+  min-width: 0;
+  gap: 6px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+@media (max-width: 599px) {
+  .param-card__value {
+    font-size: 20px;
+  }
 }
 
 .param-card__title {
@@ -14,6 +24,16 @@
   font-size: 14px;
   line-height: 1.1;
   color: var(--color-text-secondary);
+  background: var(--color-bg-page);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.param-card:hover,
+.param-card:hover > .param-card__title {
+  background: var(--color-bg-tab-active);
+  color: var(--color-text-tab-active);
 }
 
 .param-card__value {

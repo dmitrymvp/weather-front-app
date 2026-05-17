@@ -31,10 +31,12 @@ const MainWeatherCard = ({
         <p className="weather-card__date">{date}</p>
       </div>
       <div className="weather-card__temp-container">
-        <p className="weather-card__temp">{temp}</p>
-        <div className="weather-card__feels-like">
-          <p className="weather-card__feels-like-label">Ощущается</p>
-          <p className="weather-card__feels-like-temp">{feelsLike}</p>
+        <div className="weather-card__temp-row">
+          <p className="weather-card__temp">{temp}</p>
+          <div className="weather-card__feels-like">
+            <p className="weather-card__feels-like-label">Ощущается</p>
+            <p className="weather-card__feels-like-temp">{feelsLike}</p>
+          </div>
         </div>
         <div className="weather-card__icon-wrap">
           <img src={icon} alt={weatherDescription} />
