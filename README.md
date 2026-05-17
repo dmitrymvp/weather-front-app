@@ -2,6 +2,8 @@
 
 Веб-приложение для просмотра погоды с поддержкой геолокации и предустановленных городов.
 
+https://dmitrymvp.github.io/weather-front-app/
+
 ## Стек
 
 - React 19 + TypeScript
