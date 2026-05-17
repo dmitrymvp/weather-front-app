@@ -16,7 +16,7 @@ const CurrentWeather = ({ data }: CurrentWeatherProps) => {
     <section className="current-weather">
       <MainWeatherCard
         city={data.city}
-        date={formatTimestamp(data.dt)}
+        date={formatTimestamp(data.dt, data.timezone)}
         temp={`${data.temp > 0 ? '+' : ''}${round1(data.temp)}°`}
         feelsLike={`${data.feelsLike > 0 ? '+' : ''}${round1(data.feelsLike)}°`}
         weatherDescription={capitalize(data.description)}

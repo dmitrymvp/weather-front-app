@@ -20,7 +20,8 @@ const App = () => {
     if (loading) return <Loader />;
     if (error || !coordinates) return <ErrorScreen message={error ?? 'unavailable'} />;
 
-    return <WeatherPage key={`${coordinates.lat}-${coordinates.lon}`} coordinates={coordinates} />;
+    const cityLabel = activeTabId === 0 ? undefined : activeTab.label;
+    return <WeatherPage key={`${coordinates.lat}-${coordinates.lon}`} coordinates={coordinates} cityLabel={cityLabel} />;
   };
 
   return (

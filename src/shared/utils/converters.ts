@@ -1,12 +1,20 @@
-export const formatTimestamp = (timestamp: number | undefined): string => {
+const WEEKDAYS = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+const MONTHS = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+
+export const formatTimestamp = (timestamp: number | undefined, timezone?: number): string => {
   if (!timestamp) return 'Сейчас';
-  return new Date(timestamp * 1000).toLocaleString('ru-RU', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-    hour: '2-digit',
-    minute: '2-digit',
-  });
+
+  // Fallback to browser's local timezone offset in seconds
+  const tz = timezone ?? -new Date().getTimezoneOffset() * 60;
+  const date = new Date((timestamp + tz) * 1000);
+
+  const weekday = WEEKDAYS[date.getUTCDay()];
+  const day = date.getUTCDate();
+  const month = MONTHS[date.getUTCMonth()];
+  const hours = String(date.getUTCHours()).padStart(2, '0');
+  const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+
+  return `${weekday}, ${day} ${month} в ${hours}:${minutes}`;
 };
 
 export function round1(n: number): number {
