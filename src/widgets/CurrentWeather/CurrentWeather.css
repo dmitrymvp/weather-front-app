@@ -1,17 +1,18 @@
 .current-weather {
   display: flex;
   gap: 16px;
-  align-items: stretch;
+  flex-wrap: wrap;
 }
 
 .current-weather__right {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  justify-content: space-between;
+  flex-wrap: wrap;
   flex: 0 0 344px;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 945px) {
   .current-weather {
     flex-direction: column;
   }
@@ -19,6 +20,7 @@
   .current-weather__right {
     flex: none;
     flex-direction: row;
+    gap: 16px;
   }
 
   .current-weather__right > * {

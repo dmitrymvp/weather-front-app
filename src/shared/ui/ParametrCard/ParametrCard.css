@@ -8,6 +8,9 @@
   flex: 1 1 calc(50% - 7px);
   min-width: 0;
   gap: 6px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 @media (max-width: 599px) {
@@ -21,6 +24,16 @@
   font-size: 14px;
   line-height: 1.1;
   color: var(--color-text-secondary);
+  background: var(--color-bg-page);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.param-card:hover,
+.param-card:hover > .param-card__title {
+  background: var(--color-bg-tab-active);
+  color: var(--color-text-tab-active);
 }
 
 .param-card__value {

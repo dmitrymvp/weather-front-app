@@ -17,11 +17,11 @@
 
 .forecast__list {
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 16px;
+  gap: 25px;
+  justify-content: space-between;
   width: 100%;
   overflow-x: auto;
+  scrollbar-width: none;
   padding-bottom: 4px;
 }
 

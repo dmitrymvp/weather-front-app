@@ -1,6 +1,6 @@
 .temp-card {
   border-radius: 16px;
-  padding: 12px;
+  padding: 15px;
   flex: 1;
   min-width: 0;
   background: var(--color-bg-temp-chip);
@@ -8,6 +8,11 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 6px;
+  transition: 0.35s;
+}
+
+.temp-card:hover {
+  background: var(--color-bg-card);
 }
 
 @media (max-width: 599px) {
