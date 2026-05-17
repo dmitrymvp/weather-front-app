@@ -8,7 +8,7 @@ const ErrorScreen = ({ message }: ErrorScreenProps) => {
   return (
     <div className="error-screen">
       <div className="error-screen__image-wrapper">
-        <img src="/icons/cloudy.svg" alt="Облако" />
+        <img src="icons/cloudy.svg" alt="Облако" />
       </div>
       {message === 'denied' ? (
         <>
