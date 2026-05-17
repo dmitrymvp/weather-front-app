@@ -5,6 +5,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
+  base: '/weather-front-app/',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
