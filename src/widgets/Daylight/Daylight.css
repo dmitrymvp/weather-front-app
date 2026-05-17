@@ -102,7 +102,9 @@
   .daylight__labels span:not(:first-child):not(:last-child) {
     display: none;
   }
+}
 
+@media (max-width: 364px) {
   .daylight__info-value {
     font-size: 18px;
   }
