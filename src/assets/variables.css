@@ -1,0 +1,47 @@
+:root {
+  /* === Фон === */
+  --color-bg-page: #f1efe8; /* gray/100 */
+  --color-bg-card: #ffffff; /* white */
+  --color-bg-card-param: #f1efe8; /* gray/100 */
+  --color-bg-weather-card: #b5d4f4; /* blue/100 */
+  --color-bg-temp-chip: #e6f1fb; /* blue/50 */
+  --color-bg-wind-card: #e1f5ee; /* green/50 */
+  --color-bg-tab-active: #5f5e5a; /* gray/700 */
+
+  /* === Текст === */
+  --color-text-primary: #2c2c2a; /* gray/900 */
+  --color-text-secondary: #5f5e5a; /* gray/700 */
+  --color-text-page-title: #888780; /* gray/500 */
+
+  --color-text-meta: #888780; /* gray/500 */
+  --color-text-tab-active: #ffffff; /* white */
+  --color-text-sun-time: #633806; /* amber/800 */
+
+  /* === Рамки === */
+  --color-border-card: #888780; /* gray/500 */
+  --color-border-weather-card: #378add; /* blue/400 */
+  --color-border-wind-card: #085041; /* green/700 */
+
+  /* === Разделитель === */
+  --color-divider: #888780; /* gray/500 */
+  --color-divider-forecast-card: #378add; /* blue/400 */
+
+  /* === Солнце и световой день === */
+  --color-sun: #ef9f27; /* amber/300 */
+  --color-daylight-bar: #ef9f27; /* amber/300 */
+  --color-daylight-dot-inner: #fac775; /* amber/100 */
+  --color-daylight-dot-border: #ef9f27; /* amber/300 */
+  --color-daylight-bar-bg: #f1efe8; /* gray/100 */
+
+  /* === Почасовой график === */
+  --color-chart-line: #378add; /* blue/400 */
+  --color-chart-dot: #b5d4f4; /* blue/100 */
+  --color-chart-progress-fill: #5f5e5a; /* gray/700 */
+  --color-chart-progress-bg: #f1efe8; /* gray/100 */
+}
+
+/* === Шрифты === */
+:root {
+  --font-primary: 'Manrope', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+}

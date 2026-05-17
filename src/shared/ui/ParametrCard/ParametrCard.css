@@ -1,0 +1,23 @@
+.param-card {
+  background: var(--color-bg-page);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 12px;
+  width: 144px;
+  height: 72px;
+}
+
+.param-card__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  color: var(--color-text-secondary);
+}
+
+.param-card__value {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16667;
+}

@@ -1,0 +1,68 @@
+.wind-compass {
+  border: 1px solid var(--color-border-wind-card);
+  background: var(--color-bg-card);
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.wind-compass__north {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.wind-compass__south {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.wind-compass__west {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.wind-compass__east {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.wind-compass__arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%) rotate(var(--deg));
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
